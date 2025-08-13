@@ -1,0 +1,28 @@
+{
+  "name": "zarciologia",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.16.3",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.25"
+  },
+  "description": "Adminer:",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zniszcz/zarciologia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zniszcz/zarciologia/issues"
+  },
+  "homepage": "https://github.com/zniszcz/zarciologia#readme"
+}

@@ -1,0 +1,40 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Env
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+logs/*.log
+
+# Output / build
+dist/
+build/
+
+# Docker volumes / bind mounts
+pgdata/
+docker-compose.override.yml
+
+# VS Code / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Misc
+*.pid
+*.seed

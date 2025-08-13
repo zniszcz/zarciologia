@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Zarciologia — Hello Vue</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 2rem; }
+      code { background:#f4f4f4; padding: .2rem .4rem; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <h1>Zarciologia 🍽️</h1>
+    <div id="app">
+      <p>{{ greeting }}</p>
+      <button @click="ping">Ping API</button>
+      <p v-if="resp">API says: <code>{{ resp }}</code></p>
+    </div>
+
+    <!-- Vue 3 z CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script>
+      const { createApp } = Vue;
+      createApp({
+        data: () => ({ greeting: "Hello from Vue 👋", resp: "" }),
+        methods: {
+          async ping() {
+            try {
+              const r = await fetch("/api/hello");
+              const j = await r.json();
+              this.resp = JSON.stringify(j);
+            } catch (e) {
+              this.resp = "error: " + e;
+            }
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
